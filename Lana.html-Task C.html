@@ -1,0 +1,20 @@
+JavaScript
+// Master Project: Grade & Average Calculator
+function getGrade(score) {
+  if (score >= 90) return "A";
+  if (score >= 75) return "B";
+  if (score >= 60) return "C";
+  return "F";
+}
+function calculateAverage(numbers) {
+  let total = 0;
+  for (const n of numbers) {
+    total += n;
+  }
+  return total / numbers.length;
+}
+const scores = [95, 72, 40, 88];
+for (const s of scores) {
+  console.log(`${s} -> ${getGrade(s)}`);
+}
+console.log("Average:", calculateAverage(scores));
